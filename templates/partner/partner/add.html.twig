@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+{% block partner %}
+    {% block partnerAdd %}
+        active
+    {% endblock %}
+{% endblock %}
+{% block title %}Partner Add{% endblock %}
+{% block stylesheets %}
+{% endblock %}
+{% block section %}
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-6 col-md-offset-3">
+            <!-- general form elements -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Partner Add</h3>
+                </div>
+                <!-- /.box-header -->
+                <!-- form start -->
+                <form role="form" method="post">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>Name of entity</label>
+                            <input type="text" required class="form-control" name="nameOfEntity" placeholder="Name of entity">
+                        </div>
+                        <div class="form-group">
+                            <label>Sector of activity</label>
+                            <input type="text" required class="form-control" name="sectorOfActivity"  placeholder="Sector of activity">
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <input type="text" required class="form-control" name="address" placeholder="Address">
+                        </div>
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" required class="form-control" name="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" required class="form-control" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label>Function</label>
+                            <input type="text" required class="form-control" name="function" placeholder="Function">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone number</label>
+                            <input type="text" required class="form-control" name="phoneNumber" placeholder="Phone number">
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+{% endblock %}

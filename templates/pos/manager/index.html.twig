@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+{% block posActive %}
+    {% block managerListActive %}
+        active
+    {% endblock %}
+{% endblock %}
+{% block title %}Manager List{% endblock %}
+{% block stylesheets %}
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{ asset('') }}bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+{% endblock %}
+{% block section %}
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">POS List </h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>SR#</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Tel</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for i in managerList %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ i.name }}</td>
+                        <td>{{ i.address }}</td>
+                        <td>{{ i.name }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- /.box-body -->
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <!-- DataTables -->
+    <script src="{{ asset('') }}bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="{{ asset('') }}bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('#example1').DataTable()
+        })
+    </script>
+{% endblock %}
